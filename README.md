@@ -4,3 +4,7 @@
 ![](https://github.com/ti1209/MiniTIP/db_relation.PNG)
 
 2. DB Modeling
+
+3. Sync
+
+4. Bootstrap
