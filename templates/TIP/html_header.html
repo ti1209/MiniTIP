@@ -1,0 +1,48 @@
+{% load static %}
+
+{% block html_header %}
+    <head>
+        <meta charset="utf-8"/>
+
+        <title>{% block title %}Julie's TIP{% endblock title %}</title>
+        <meta name="description" content="Latest updates and statistic charts">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+        <link href="/static/dist/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet"
+              type="text/css"/>
+        <link href="/static/dist/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/dist/assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/dist/assets/css/skins/header/base/light.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/dist/assets/css/skins/header/menu/light.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/dist/assets/css/skins/brand/navy.css" rel="stylesheet" type="text/css"/>
+        <link href="/static/dist/assets/css/skins/aside/navy.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="/static/dist/assets/media/logos/favicon.ico"/>
+
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj = h.hj || function () {
+                    (h.hj.q = h.hj.q || []).push(arguments)
+                };
+                h._hjSettings = {hjid: 1070954, hjsv: 6};
+                a = o.getElementsByTagName('head')[0];
+                r = o.createElement('script');
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-37564768-1');
+        </script>
+    </head>
+{% endblock html_header %}

@@ -1,0 +1,674 @@
+{% load static %}
+
+{% block script %}
+    <script>
+        var KTAppOptions = {
+            "colors": {
+                "state": {
+                    "brand": "#5d78ff",
+                    "metal": "#c4c5d6",
+                    "light": "#ffffff",
+                    "accent": "#00c5dc",
+                    "primary": "#5867dd",
+                    "success": "#34bfa3",
+                    "info": "#36a3f7",
+                    "warning": "#ffb822",
+                    "danger": "#fd3995",
+                    "focus": "#9816f4"
+                },
+                "base": {
+                    "label": [
+                        "#c5cbe3",
+                        "#a1a8c3",
+                        "#3d4465",
+                        "#3e4466"
+                    ],
+                    "shape": [
+                        "#f0f3ff",
+                        "#d9dffa",
+                        "#afb4d4",
+                        "#646c9a"
+                    ]
+                }
+            }
+        };
+    </script>
+    <script src="{% static '/dist/assets/js/jquery-3.4.1.min.js' %}"></script>
+    <script src={% static '/src/assets/plugins/jquery-ui/jquery-ui.min.js' %}></script>
+    <script src="/static/dist/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+    <script src="/static/dist/assets/js/scripts.bundle.js" type="text/javascript"></script>
+    <script src="/static/dist/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"
+            type="text/javascript"></script>
+    <script src="{% static '/dist/assets/js/tip-charts.js' %}" type="text/javascript"></script>
+    <script src="{% static '/dist/assets/js/device-chart.js' %}" type="text/javascript"></script>
+    <script src="/static/dist/assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+{% endblock script %}
+
+{% block contents %}
+    <!-- Subheader -->
+    <div class="kt-subheader kt-grid__item" id="kt_subheader">
+        <div class="kt-container  kt-container--fluid ">
+            <div class="kt-subheader__main">
+                <h3 class="kt-subheader__title">디바이스 대시보드</h3>
+
+                <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+                <div class="kt-subheader__breadcrumbs">
+                    <a href="#" class="kt-subheader__breadcrumbs-link">대시보드</a>
+                    <span class="kt-subheader__breadcrumbs-separator"></span>
+                    <a href="" class="kt-subheader__breadcrumbs-link">
+                        디바이스</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <!-- 1. 디바이스 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="first-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-10">
+                    <div class="kt-portlet__body">
+                        <div class="kt-widget-10__wrapper">
+                            <div class="kt-widget-10__details">
+                                <div class="kt-widget-10__title">
+                                    <h4>일일 등록 대수</h4>
+                                </div>
+                            </div>
+                            <div class="kt-widget-10__num">
+                                   <h2 id="today_count">+</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fit">
+                        <div class="kt-widget-10__chart">
+                            <canvas id="first-chart" class="chartjs-render-monitor" height="200"
+                                    style="display: block; height: 100px; width: 418px;" width="836"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2. 기간 별 통계 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="second-portlet" class="kt-portlet kt-portlet--tabs kt-portlet--height-fluid">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">기간 별 통계</h3>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-right" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#first" role="tab" aria-selected="true">
+                                        전체
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#second" role="tab" aria-selected="false">
+                                        주별
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#third" role="tab" aria-selected="false">
+                                        월별
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="first" role="tabpanel">
+                                <div style="width: 50%; float: left; padding-top: 10px;">
+                                    <h5 align="center">일평균 등록 대수</h5>
+                                    <h1 align="center" id="daily_average">+</h1>
+                                </div>
+                                <div style="width: 50%; float: left; padding-top: 10px;">
+                                    <h5 align="center">누적 대수</h5>
+                                    <h1 align="center" id="total_sum"></h1>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="second" role="tabpanel">
+                                <div style="width: 50%; float: left; padding-top: 10px;">
+                                    <h5 align="center">평균 등록 대수</h5>
+                                    <h1 align="center" id="weekly_average" id="daily_average">+</h1>
+                                </div>
+                                <div style="width: 50%; float: left; padding-top: 10px;">
+                                    <h5 align="center">총 대수</h5>
+                                    <h1 align="center" id="weekly_sum"></h1>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="third" role="tabpanel">
+                                <div style="width: 50%; float: left; padding-top: 10px;">
+                                    <h5 align="center">평균 등록 대수</h5>
+                                    <h1 align="center" id="monthly_average">+</h1>
+                                </div>
+                                <div style="width: 50%; float: left; padding-top: 10px;">
+                                    <h5 align="center">총 대수</h5>
+                                    <h1 align="center" id="monthly_sum"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3. 정책 적용 현황 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="third-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-21">
+                    <div class="kt-portlet__head kt-portlet__head--noborder">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">정책 적용 현황</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="kt-widget-11__item">
+                            <div class="kt-widget-11__wrapper">
+                                <div class="kt-widget-11__value" align="right">
+                                    <span id="non-default"></span>
+                                   <span class="kt-opacity-5" id="total">총 </span>
+                                </div>
+                            </div>
+                            <div class="kt-widget-11__progress">
+                                <div class="progress" style="height: 50px;">
+                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
+                                         aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" id="progress-bar"><b id="non-default-rate"></b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. 월별 그래프 -->
+            <div class="col-lg-8 col-xl-8 order-lg-1 order-xl-1">
+                <div id="fourth-portlet" class="kt-portlet kt-portlet--height-fluid">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">월별 그래프</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fluid">
+                        <div class="kt-widget-9">
+                            <div class="kt-widget-9__chart">
+                                <div class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand">
+                                        <div class=""></div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink">
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                                <canvas id="fourth-chart" height="500" width="1452" class="chartjs-render-monitor"
+                                        style="display: block; height: 200px; width: 726px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5. OS 유형 현황 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="fifth-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget ">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">OS 유형 현황</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="kt-widget-4">
+                            <div class="kt-widget-4__item">
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-section">
+                                        <div class="kt-widget-4__item-pic">
+                                            <img src="{% static '/dist/assets/media/users/windows.png' %}" alt="image">
+                                        </div>
+                                        <div class="kt-widget-4__item-info">
+                                            <a href="#" class="kt-widget-4__item-username">Windows</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-price">
+                                        <span class="kt-widget-4__item-number" id="windows"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kt-widget-4__item">
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-section">
+                                        <div class="kt-widget-4__item-pic">
+                                            <img src="{% static '/dist/assets/media/users/mac.png' %}" alt="image">
+                                        </div>
+                                        <div class="kt-widget-4__item-info">
+                                            <a href="#" class="kt-widget-4__item-username">macOS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-price">
+                                        <span class="kt-widget-4__item-number" id="mac"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kt-widget-4__item">
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-section">
+                                        <div class="kt-widget-4__item-pic">
+                                            <img src="{% static '/dist/assets/media/users/linux.png' %}" alt="image">
+                                        </div>
+                                        <div class="kt-widget-4__item-info">
+                                            <a href="#" class="kt-widget-4__item-username" >Linux</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-price">
+                                        <span class="kt-widget-4__item-number" id="linux"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kt-widget-4__item">
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-section">
+                                        <div class="kt-widget-4__item-pic">
+                                            <img src="{% static '/dist/assets/media/users/unknown.png' %}" alt="image">
+                                        </div>
+                                        <div class="kt-widget-4__item-info">
+                                            <a href="#" class="kt-widget-4__item-username">Unknown</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-widget-4__item-content">
+                                    <div class="kt-widget-4__item-price">
+                                        <span class="kt-widget-4__item-number" id="unknown"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. 라이센스 유효 현황 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="sixth-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-10">
+                    <div class="kt-portlet__head kt-portlet__head--noborder">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">라이센스 유효 현황</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="chartjs-size-monitor">
+                            <div class="chartjs-size-monitor-expand">
+                                <div class=""></div>
+                            </div>
+                            <div class="chartjs-size-monitor-shrink">
+                                <div class=""></div>
+                            </div>
+                        </div>
+                        <canvas id="sixth-chart" style="display: block; height: 389px; width: 779px;" width="100"
+            height="100" class="chartjs-render-monitor"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- 7. 디바이스 업데이트 현황 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="seventh-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-10">
+                    <div class="kt-portlet__head kt-portlet__head--noborder">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">최신 버전 업데이트 현황</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="chartjs-size-monitor">
+                            <div class="chartjs-size-monitor-expand">
+                                <div class=""></div>
+                            </div>
+                            <div class="chartjs-size-monitor-shrink">
+                                <div class=""></div>
+                            </div>
+                        </div>
+                        <canvas id="seventh-chart" style="display: block; height: 389px; width: 779px;" width="1558"
+                                height="900" class="chartjs-render-monitor"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- 8. 디바이스 온오프라인 현황 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="eighth-portlet" class="kt-portlet kt-portlet--tabs kt-portlet--height-fluid">
+                    <div class="kt-portlet__head kt-portlet__head--noborder">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                온오프라인 현황
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show" id="kt_portlet_tabs_1111_1_content" role="tabpanel">
+                                <div class="kt-widget-11">
+                                    <div class="kt-widget-11__item">
+                                        <div class="kt-widget-11__wrapper">
+                                            <div class="kt-widget-11__title">
+                                                전체 온라인 상태
+                                            </div>
+                                            <div class="kt-widget-11__value" id="online">
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget-11__progress">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" id="online-progress-bar"
+                                                     style="width: 56%"
+                                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="kt-widget-11__item">
+                                        <div class="kt-widget-11__wrapper">
+                                            <div class="kt-widget-11__title">
+                                                30일 이상 90일 미만 오프라인
+                                            </div>
+                                            <div class="kt-widget-11__value" id="thirty">
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget-11__progress">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                     id="thirty-progress-bar"
+                                                     aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="kt-widget-11__item">
+                                        <div class="kt-widget-11__wrapper">
+                                            <div class="kt-widget-11__title">
+                                                90일 이상 오프라인
+                                            </div>
+                                            <div class="kt-widget-11__value" id="ninety">
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget-11__progress">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                     id="ninety-progress-bar"
+                                                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. 테넌트 별 OS 유형 -->
+            <div class="col-lg-6 col-xl-6 order-lg-1 order-xl-1">
+                <div id="ninth-portlet" class="kt-portlet kt-portlet--mobile">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">테넌트 별 OS 개수</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <table class="table m-table table-bordered table-head-solid table-center" style="white-space: nowrap;">
+                            <thead class="thead-light">
+                            <tr>
+                                <th>Tenant</th>
+                                <th>Windows</th>
+                                <th>macOS</th>
+                                <th>Linux</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if os_count %}
+                                {% for os in os_count %}
+                                    <tr>
+                                        <td>{{ os.tenant_name }}</td>
+                                        <td>{{ os.windows_count }}</td>
+                                        <td>{{ os.mac_count }}</td>
+                                        <td>{{ os.linux_count }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- 10. 테넌트 정책 별 디바이스 -->
+            <div class="col-lg-6 col-xl-6 order-lg-1 order-xl-1">
+                <div id="tenth-portlet" class="kt-portlet kt-portlet-mobile">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">테넌트 정책 별 디바이스 총 대수</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <table class="table m-table table-bordered table-head-solid table-center">
+                            <thead class="thead-light">
+                            <tr>
+                                <th>Tenant</th>
+                                <th>Policy</th>
+                                <th>total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if policy_per_tenant %}
+                                {% for p in policy_per_tenant %}
+                                    <tr>
+                                        <td>{{ p.tenant.tenant_name }}</td>
+                                        <td>{{ p.policy_name }}</td>
+                                        <td>{{ p.device_count }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. 삭제 권장 디바이스 -->
+            <div class="col-lg-12 col-xl-12 order-lg-1 order-xl-1">
+                <div id="eleventh-portlet" class="kt-portlet kt-portlet--tabs kt-portlet--mobile">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">삭제 권장 디바이스</h3>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-right" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#nine" role="tab" aria-selected="true">
+                                        90일 이상 오프라인 디바이스
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#mac" role="tab" aria-selected="false">
+                                        MAC 주소 중복 디바이스
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="nine" role="tabpanel">
+                                <table id="eleventh-table1" class="table m-table table-bordered table-head-solid table-center" style="overflow: hidden; white-space: nowrap;">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th>Tenant</th>
+                                        <th>Zone</th>
+                                        <th>Device</th>
+                                        <th>Hostname</th>
+                                        <th>Online State</th>
+                                        <th>Offline Date</th>
+                                        <th>Registered Date</th>
+                                        <th>OS</th>
+                                        <th>IP Address</th>
+                                        <th>MAC Address</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if over_ninety_days %}
+                                        {% for i in over_ninety_days %}
+                                            <tr>
+                                                <td>{{ i.tenant.tenant_name }}</td>
+                                                <td>
+                                                {% for zone in i.zonedevices_set.all %}
+                                                    {{ zone.zone.zone_name }}<br>
+                                                {% empty %}
+                                                {% endfor %}
+                                                </td>
+                                                <td>{{ i.name }}</td>
+                                                <td>{{ i.host_name }}</td>
+                                                <td>{{ i.state }}</td>
+                                                <td>{{ i.date_offline }}</td>
+                                                <td>{{ i.date_first_registered }}</td>
+                                                <td>{{ i.os_version }}</td>
+                                                <td>
+                                                {% for ip in i.ipaddress_set.all  %}
+                                                    {{ ip.ip_address }}<br>
+                                                {% empty %}
+                                                {% endfor %}
+                                                </td>
+                                                <td>
+                                                {% for mac in i.macaddress_set.all  %}
+                                                    {{ mac.mac_address }}<br>
+                                                {% empty %}
+                                                {% endfor %}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="mac" role="tabpanel">
+                                <table id="eleventh-table2" class="table m-table table-bordered table-head-solid table-center" style="overflow: hidden; white-space: nowrap;">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th>MAC Address</th>
+                                         <th>IP Address</th>
+                                        <th>Tenant</th>
+                                        <th>Zone</th>
+                                        <th>Device</th>
+                                        <th>Hostname</th>
+                                        <th>Online State</th>
+                                        <th>Offline Date</th>
+                                        <th>Registered Date</th>
+                                        <th>OS</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% if mac_duplicate %}
+                                        {% for i in mac_duplicate %}
+                                            <tr>
+                                                <td>
+                                                    {% for mac in i.macaddress_set.all %}
+                                                        {{ mac.mac_address }}<br>
+                                                    {% empty %}
+                                                    {% endfor %}
+                                                </td>
+                                                <td>
+                                                    {% for ip in i.ipaddress_set.all %}
+                                                        {{ ip.ip_address }}<br>
+                                                    {% empty %}
+                                                    {% endfor %}
+                                                </td>
+                                                <td>{{ i.tenant.tenant_name }}</td>
+                                                <td>
+                                                    {% for zone in i.zonedevices_set.all %}
+                                                        {{ zone.zone.zone_name }}<br>
+                                                    {% empty %}
+                                                    {% endfor %}
+                                                </td>
+                                                <td>{{ i.name }}</td>
+                                                <td>{{ i.host_name }}</td>
+                                                <td>{{ i.state }}</td>
+                                                <td>{{ i.date_offline }}</td>
+                                                <td>{{ i.date_first_registered }}</td>
+                                                <td>{{ i.os_version }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. 테넌트 별 디바이스 에이전트 버전 -->
+            <div class="col-lg-12 col-xl-12 order-lg-1 order-xl-1">
+                <div id="twelfth-portlet" class="kt-portlet kt-portlet--mobile">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">테넌트 별 에이전트 버전</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <table class="table m-table table-bordered table-head-solid table-center">
+                            <thead class="thead-light">
+                            <tr>
+                                <th rowspan="2" style="vertical-align: middle;">Tenant</th>
+                                <th rowspan="2" style="vertical-align: middle;">Update Rate</th>
+                                <th rowspan="2" style="vertical-align: middle;">Total</th>
+                                <th rowspan="2" style="vertical-align: middle;">Current Version<br>(2.1.1550)</th>
+                                <th rowspan="2" style="vertical-align: middle;">Old Version</th>
+                                <th colspan="5" style="text-align: center;">Version</th>
+                            </tr>
+                            <tr>
+                                <th>2.1.1550</th>
+                                <th>2.0.1540</th>
+                                <th>2.0.1534</th>
+                                <th>2.0.1530</th>
+                                <th>2.0.1520</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if rate and unupdate_count and fourty_count and twenty_count and thirty_count and thirtyfour_count %}
+                                {% for r in rate %}
+                                    <tr>
+                                        <td>{{ r.tenant_name }}</td>
+                                        <td>{{ r.rate }}%</td>
+                                        <td>{{ r.td_total}}</td>
+                                        <td>{{ r.update_count }}</td>
+                                        {% for un in unupdate_count %}
+                                            {% if r.id == un.id %}
+                                                <td>{{ un.unupdate_count }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                        <td>{{ r.update_count }}</td>
+                                        {% for f in fourty_count %}
+                                            {% if r.id == f.id %}
+                                                <td>{{ f.fourty_count }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% for tf in thirtyfour_count %}
+                                            {% if r.id == tf.id %}
+                                                <td>{{ tf.thirtyfour_count }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% for th in thirty_count %}
+                                            {% if r.id == th.id %}
+                                                <td>{{ th.thirty_count }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% for tw in twenty_count %}
+                                            {% if r.id == tw.id %}
+                                                <td>{{ tw.twenty_count }}</td>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contents %}

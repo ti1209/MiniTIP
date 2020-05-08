@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="db" uuid="c8a594e8-49b5-41ce-af21-2c90d0281992">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db.sqlite3</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="tip@localhost" uuid="00a60613-7c25-4205-a0bf-d2dc33620977">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/tip</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="mini_tip_console@ws.pagonetworks.net" uuid="c38fd796-2d20-4d3f-ac38-91650efb568d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ws.pagonetworks.net:5432/mini_tip_console</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="b6582171-1c1f-43e9-b35f-5685156e93f8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/MiniTIP/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ws.pagonetworks.net:5432/mini_tip_console</jdbc-url>
+    </data-source>
+  </component>
+</project>

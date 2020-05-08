@@ -1,0 +1,315 @@
+{% load static %}
+
+{% block contents %}
+    <!-- Subheader -->
+    <div class="kt-subheader kt-grid__item" id="kt_subheader">
+        <div class="kt-container  kt-container--fluid ">
+            <div class="kt-subheader__main">
+                <h3 class="kt-subheader__title">글로벌리스트 대시보드</h3>
+
+                <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+                <div class="kt-subheader__breadcrumbs">
+                    <a href="#" class="kt-subheader__breadcrumbs-link">대시보드</a>
+                    <span class="kt-subheader__breadcrumbs-separator"></span>
+                    <a href="" class="kt-subheader__breadcrumbs-link">
+                        글로벌리스트</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <!-- 1. Quarantine - Malware -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="first-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-10">
+                    <div class="kt-portlet__body">
+                        <div class="kt-widget-10__wrapper">
+                            <div class="kt-widget-10__details">
+                                <div class="kt-widget-10__title">
+                                    <h4>일일 격리 - Malware</h4>
+                                </div>
+                            </div>
+                            <div class="kt-widget-10__num">
+                                   <h2>+{{ today_malware_count }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fit">
+                        <div class="kt-widget-10__chart">
+                            <canvas id="first-chart" class="chartjs-render-monitor" height="200"
+                                    style="display: block; height: 100px; width: 418px;" width="836"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2. Quarantine - PUP -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="second-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-10">
+                    <div class="kt-portlet__body">
+                        <div class="kt-widget-10__wrapper">
+                            <div class="kt-widget-10__details">
+                                <div class="kt-widget-10__title">
+                                    <h4>일일 격리 - PUP</h4>
+                                </div>
+                            </div>
+                            <div class="kt-widget-10__num">
+                                   <h2>+{{ today_pup_count }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fit">
+                        <div class="kt-widget-10__chart">
+                            <canvas id="second-chart" class="chartjs-render-monitor" height="200"
+                                    style="display: block; height: 100px; width: 418px;" width="836"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3. Safelist -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="third-portlet" class="kt-portlet kt-portlet--height-fluid kt-widget-10">
+                    <div class="kt-portlet__body">
+                        <div class="kt-widget-10__wrapper">
+                            <div class="kt-widget-10__details">
+                                <div class="kt-widget-10__title">
+                                    <h4>일일 예외</h4>
+                                </div>
+                            </div>
+                            <div class="kt-widget-10__num">
+                                   <h2>+{{ today_safe_count }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fit">
+                        <div class="kt-widget-10__chart">
+                            <canvas id="third-chart" class="chartjs-render-monitor" height="200"
+                                    style="display: block; height: 100px; width: 418px;" width="836"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. 월별 그래프 -->
+            <div class="col-lg-8 col-xl-8 order-lg-1 order-xl-1">
+                <div id="fourth-portlet" class="kt-portlet kt-portlet--height-fluid">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">월별 그래프</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body kt-portlet__body--fluid">
+                        <div class="kt-widget-9">
+                            <div class="kt-widget-9__panel">
+                                <div class="kt-widget-9__legends">
+                                    <div class="kt-widget-9__legend">
+                                        <div class="kt-widget-9__legend-bullet kt-bg-danger"></div>
+                                        <div class="kt-widget-9__legend-label">격리 - Malware</div>
+                                    </div>
+                                    <div class="kt-widget-9__legend">
+                                        <div class="kt-widget-9__legend-bullet kt-bg-focus"></div>
+                                        <div class="kt-widget-9__legend-label">격리 - PUP</div>
+                                    </div>
+                                    <div class="kt-widget-9__legend">
+                                        <div class="kt-widget-9__legend-bullet kt-bg-warning"></div>
+                                        <div class="kt-widget-9__legend-label">예외</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kt-widget-9__chart">
+                                <div class="chartjs-size-monitor">
+                                    <div class="chartjs-size-monitor-expand">
+                                        <div class=""></div>
+                                    </div>
+                                    <div class="chartjs-size-monitor-shrink">
+                                        <div class=""></div>
+                                    </div>
+                                </div>
+                                <canvas id="fourth-chart" height="500" width="1452" class="chartjs-render-monitor"
+                                        style="display: block; height: 200px; width: 726px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5. 항목 별 통계 -->
+            <div class="col-lg-4 col-xl-4 order-lg-1 order-xl-1">
+                <div id="fifth-portlet" class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">항목 별 통계</h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div>
+                            <div style="width: 40%; float: left; height: 50px; text-align: center; padding-top: 15px;"><h5>격리 - Malware</h5></div>
+                            <div style="width: 30%; float: left;">
+                                <h5 align="center">일평균</h5>
+                                <h3 align="center">+{{ malware_avg }}</h3>
+                            </div>
+                            <div style="width: 30%; float: left;">
+                                <h5 align="center">누적</h5>
+                                <h3 align="center">{{ malware_total }}</h3>
+                            </div>
+                        </div>
+                        <div class="kt-separator kt-separator--space-sm kt-separator--border-dashed"></div>
+                        <div>
+                            <div style="width: 40%; float: left; height: 50px; text-align: center; padding-top: 30px;"><h5>격리 - PUP</h5></div>
+                            <div style="width: 30%; float: left; padding-top: 10px;">
+                                <h5 align="center">일평균</h5>
+                                <h3 align="center">+{{ pup_avg }}</h3>
+                            </div>
+                            <div style="width: 30%; float: left; padding-top: 10px;">
+                                <h5 align="center">누적</h5>
+                                <h3 align="center">{{ pup_total }}</h3>
+                            </div>
+                        </div>
+                        <div class="kt-separator kt-separator--space-md kt-separator--border-dashed"></div>
+                        <div>
+                            <div style="width: 40%; float: left; height: 50px; text-align: center; padding-top: 17px;"><h5>예외</h5></div>
+                            <div style="width: 30%; float: left;">
+                                <h5 align="center">일평균</h5>
+                                <h3 align="center">+{{ safe_avg }}</h3>
+                            </div>
+                            <div style="width: 30%; float: left;">
+                                <h5 align="center">누적</h5>
+                                <h3 align="center">{{ safe_total }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contents %}
+
+{% block script %}
+    <script>
+        var KTAppOptions = {
+            "colors": {
+                "state": {
+                    "brand": "#5d78ff",
+                    "metal": "#c4c5d6",
+                    "light": "#ffffff",
+                    "accent": "#00c5dc",
+                    "primary": "#5867dd",
+                    "success": "#34bfa3",
+                    "info": "#36a3f7",
+                    "warning": "#ffb822",
+                    "danger": "#fd3995",
+                    "focus": "#9816f4"
+                },
+                "base": {
+                    "label": [
+                        "#c5cbe3",
+                        "#a1a8c3",
+                        "#3d4465",
+                        "#3e4466"
+                    ],
+                    "shape": [
+                        "#f0f3ff",
+                        "#d9dffa",
+                        "#afb4d4",
+                        "#646c9a"
+                    ]
+                }
+            }
+        };
+    </script>
+    <script src="/static/dist/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+    <script src="/static/dist/assets/js/scripts.bundle.js" type="text/javascript"></script>
+    <script src="/static/dist/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"
+            type="text/javascript"></script>
+    <script src="{% static '/dist/assets/js/global-charts.js' %}" type="text/javascript"></script>
+    <script src="/static/dist/assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+    <script>
+        "use strict";
+        const TIPGlobalistDashboard = function () {
+            const firstPortlet = function () {
+                const portlet = $("#first-portlet");
+
+                if (portlet === 0) {
+                    return false;
+                }
+
+                const dailyChart = new DailyChart('first-chart');
+
+                dailyChart.set('',{{ daily_malware_count }}, '#fd3995');
+            };
+
+            const secondPortlet = function () {
+                const portlet = $("#second-portlet");
+
+                if (portlet === 0) {
+                    return false;
+                }
+
+                const dailyChart = new DailyChart('second-chart');
+
+                dailyChart.set('',{{ daily_pup_count }}, '#9816f4');
+            };
+
+            const thirdPortlet = function () {
+                const portlet = $("#third-portlet");
+
+                if (portlet === 0) {
+                    return false;
+                }
+
+                const dailyChart = new DailyChart('third-chart');
+
+                dailyChart.set('',{{ daily_safe_count }}, '#ffb822');
+            };
+
+            const fourthPortlet = function () {
+                const portlet = $("#fourth-portlet");
+
+                if (portlet === 0) {
+                    return false;
+                }
+
+                const monthlyChart = new MonthlyChart('fourth-chart');
+
+                monthlyChart.add({
+                    backgroundColor: '#fd3995',
+                    borderWidth: 2,
+                    borderColor: '#fd3995',
+                    fill: false,
+                    lineTension: 0,
+                    data: {{ malware_monthly_count }}
+                }),
+                    monthlyChart.add({
+                        backgroundColor: '#9816f4',
+                        borderWidth: 2,
+                        borderColor: '#9816f4',
+                        fill: false,
+                        lineTension: 0,
+                        data: {{ pup_monthly_count }}
+                    }),
+                    monthlyChart.add({
+                        backgroundColor: '#ffb822',
+                        borderWidth: 2,
+                        borderColor: '#ffb822',
+                        fill: false,
+                        lineTension: 0,
+                        data: {{ safe_monthly_count }}
+                    });
+            };
+
+            return {
+                init: function () {
+                    firstPortlet();
+                    secondPortlet();
+                    thirdPortlet();
+                    fourthPortlet();
+
+                }
+            };
+        }();
+
+        jQuery(document).ready(function () {
+            TIPGlobalistDashboard.init();
+        });
+    </script>
+{% endblock script %}

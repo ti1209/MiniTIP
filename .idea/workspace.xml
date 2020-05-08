@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36087e16-84f7-4470-8e08-875566c318e3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mini_tip_console: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mini_tip_console: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mini_tip_console: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mini_tip_console: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mini_tip_console: database" type="162271b6:PgImplModel$Database" />
+        <item name="access methods" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mini_tip_console@ws.pagonetworks.net" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mini_tip_console@ws.pagonetworks.net" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XMr9WTHAbmC0dv4prOnAxLbiO6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/dist/assets/js" />
+      <recent name="$PROJECT_DIR$/static/dist/assets/media/users" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/MiniTIP" />
+      <recent name="$PROJECT_DIR$/Tenant" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.data_sync">
+    <configuration name="data_sync" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MiniTIP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MiniTIP/management/commands/data_sync.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_data_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MiniTIP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_data_all.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MiniTIP" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MiniTIP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.data_sync" />
+        <item itemvalue="Python.get_data_all" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36087e16-84f7-4470-8e08-875566c318e3" name="Default Changelist" comment="" />
+      <created>1580866654051</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580866654051</updated>
+      <workItem from="1580866671239" duration="11463000" />
+      <workItem from="1580951238016" duration="85000" />
+      <workItem from="1580970740560" duration="5697000" />
+      <workItem from="1580977967224" duration="3956000" />
+      <workItem from="1581036524716" duration="14494000" />
+      <workItem from="1581296643133" duration="17234000" />
+      <workItem from="1581382821011" duration="21618000" />
+      <workItem from="1581410126269" duration="4890000" />
+      <workItem from="1581470414606" duration="3326000" />
+      <workItem from="1581480669154" duration="7820000" />
+      <workItem from="1581576275759" duration="10812000" />
+      <workItem from="1581659426081" duration="13290000" />
+      <workItem from="1581902015184" duration="9438000" />
+      <workItem from="1581988411985" duration="675000" />
+      <workItem from="1582001662051" duration="15262000" />
+      <workItem from="1582077206989" duration="15655000" />
+      <workItem from="1582160805263" duration="12013000" />
+      <workItem from="1582247732495" duration="182000" />
+      <workItem from="1582510810121" duration="10087000" />
+      <workItem from="1582680449643" duration="12810000" />
+      <workItem from="1582766294130" duration="7617000" />
+      <workItem from="1582780815422" duration="52826000" />
+      <workItem from="1583110986289" duration="4313000" />
+      <workItem from="1583118357931" duration="11000" />
+      <workItem from="1583122650512" duration="18603000" />
+      <workItem from="1583198203075" duration="24048000" />
+      <workItem from="1583284514144" duration="26321000" />
+      <workItem from="1583386271861" duration="13695000" />
+      <workItem from="1583419050740" duration="41476000" />
+      <workItem from="1583542405576" duration="61826000" />
+      <workItem from="1583713860699" duration="8980000" />
+      <workItem from="1583818614690" duration="865000" />
+      <workItem from="1583827686561" duration="6442000" />
+      <workItem from="1583891638468" duration="21592000" />
+      <workItem from="1584061489270" duration="17265000" />
+      <workItem from="1584318888501" duration="15980000" />
+      <workItem from="1584407048264" duration="900000" />
+      <workItem from="1588640136603" duration="560000" />
+      <workItem from="1588640740376" duration="2040000" />
+      <workItem from="1588939198696" duration="2443000" />
+      <workItem from="1588943511432" duration="747000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="MAXIMUM_HISTORY_ROWS" value="5000" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="741" y="-826" key="#Inspections" timestamp="1582093717405">
+      <screen x="-439" y="-1057" width="2560" height="1057" />
+    </state>
+    <state x="741" y="-826" key="#Inspections/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582093717405" />
+    <state x="2759" y="254" key="#Notifications" timestamp="1588943671641">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2759" y="254" key="#Notifications/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588943671641" />
+    <state x="2863" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588640808038">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="406" y="-868" key="#com.intellij.execution.impl.EditConfigurationsDialog/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581057367639" />
+    <state x="406" y="-868" key="#com.intellij.execution.impl.EditConfigurationsDialog/-439.-1057.2560.1057/0.23.1792.1026@-439.-1057.2560.1057" timestamp="1581480684637" />
+    <state x="2863" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588640808038" />
+    <state x="937" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1582784345667" />
+    <state x="880" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1583202640895" />
+    <state x="11" y="-850" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1581408163425">
+      <screen x="-439" y="-1057" width="2560" height="1057" />
+    </state>
+    <state x="11" y="-850" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581408163425" />
+    <state x="995" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583389270122">
+      <screen x="0" y="23" width="1792" height="1034" />
+    </state>
+    <state x="983" y="-786" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582019282680" />
+    <state x="995" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1582768828497" />
+    <state x="995" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1583389270122" />
+    <state width="932" height="241" key="GridCell.Tab.0.bottom" timestamp="1583391106300">
+      <screen x="0" y="23" width="1792" height="1036" />
+    </state>
+    <state width="1625" height="239" key="GridCell.Tab.0.bottom/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581472974469" />
+    <state width="1233" height="286" key="GridCell.Tab.0.bottom/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581902403983" />
+    <state width="1233" height="286" key="GridCell.Tab.0.bottom/-439.-1057.2560.1057/0.23.1792.1025@0.23.1792.1025" timestamp="1581902155350" />
+    <state width="1517" height="218" key="GridCell.Tab.0.bottom/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582020776418" />
+    <state width="1792" height="356" key="GridCell.Tab.0.bottom/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819105" />
+    <state width="1792" height="356" key="GridCell.Tab.0.bottom/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462541" />
+    <state width="1792" height="353" key="GridCell.Tab.0.bottom/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281359" />
+    <state width="932" height="241" key="GridCell.Tab.0.bottom/0.23.1792.1034@0.23.1792.1034" timestamp="1583386273376" />
+    <state width="932" height="241" key="GridCell.Tab.0.bottom/0.23.1792.1036@0.23.1792.1036" timestamp="1583391106300" />
+    <state width="932" height="241" key="GridCell.Tab.0.center" timestamp="1583391106299">
+      <screen x="0" y="23" width="1792" height="1036" />
+    </state>
+    <state width="1625" height="239" key="GridCell.Tab.0.center/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581472974468" />
+    <state width="1233" height="286" key="GridCell.Tab.0.center/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581902403982" />
+    <state width="1233" height="286" key="GridCell.Tab.0.center/-439.-1057.2560.1057/0.23.1792.1025@0.23.1792.1025" timestamp="1581902155349" />
+    <state width="1517" height="218" key="GridCell.Tab.0.center/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582020776417" />
+    <state width="1792" height="356" key="GridCell.Tab.0.center/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819104" />
+    <state width="1792" height="356" key="GridCell.Tab.0.center/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462540" />
+    <state width="1792" height="353" key="GridCell.Tab.0.center/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281358" />
+    <state width="932" height="241" key="GridCell.Tab.0.center/0.23.1792.1034@0.23.1792.1034" timestamp="1583386273375" />
+    <state width="932" height="241" key="GridCell.Tab.0.center/0.23.1792.1036@0.23.1792.1036" timestamp="1583391106299" />
+    <state width="932" height="241" key="GridCell.Tab.0.left" timestamp="1583391106299">
+      <screen x="0" y="23" width="1792" height="1036" />
+    </state>
+    <state width="1625" height="239" key="GridCell.Tab.0.left/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581472974467" />
+    <state width="1233" height="286" key="GridCell.Tab.0.left/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581902403982" />
+    <state width="1233" height="286" key="GridCell.Tab.0.left/-439.-1057.2560.1057/0.23.1792.1025@0.23.1792.1025" timestamp="1581902155349" />
+    <state width="1517" height="218" key="GridCell.Tab.0.left/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582020776417" />
+    <state width="1792" height="356" key="GridCell.Tab.0.left/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819104" />
+    <state width="1792" height="356" key="GridCell.Tab.0.left/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462539" />
+    <state width="1792" height="353" key="GridCell.Tab.0.left/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281358" />
+    <state width="932" height="241" key="GridCell.Tab.0.left/0.23.1792.1034@0.23.1792.1034" timestamp="1583386273374" />
+    <state width="932" height="241" key="GridCell.Tab.0.left/0.23.1792.1036@0.23.1792.1036" timestamp="1583391106299" />
+    <state width="932" height="241" key="GridCell.Tab.0.right" timestamp="1583391106299">
+      <screen x="0" y="23" width="1792" height="1036" />
+    </state>
+    <state width="1625" height="239" key="GridCell.Tab.0.right/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581472974468" />
+    <state width="1233" height="286" key="GridCell.Tab.0.right/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581902403983" />
+    <state width="1233" height="286" key="GridCell.Tab.0.right/-439.-1057.2560.1057/0.23.1792.1025@0.23.1792.1025" timestamp="1581902155349" />
+    <state width="1517" height="218" key="GridCell.Tab.0.right/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582020776418" />
+    <state width="1792" height="356" key="GridCell.Tab.0.right/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819105" />
+    <state width="1792" height="356" key="GridCell.Tab.0.right/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462540" />
+    <state width="1792" height="353" key="GridCell.Tab.0.right/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281358" />
+    <state width="932" height="241" key="GridCell.Tab.0.right/0.23.1792.1034@0.23.1792.1034" timestamp="1583386273375" />
+    <state width="932" height="241" key="GridCell.Tab.0.right/0.23.1792.1036@0.23.1792.1036" timestamp="1583391106299" />
+    <state width="1792" height="356" key="GridCell.Tab.1.bottom" timestamp="1582537819106">
+      <screen x="0" y="23" width="1792" height="1033" />
+    </state>
+    <state width="1792" height="356" key="GridCell.Tab.1.bottom/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819106" />
+    <state width="1792" height="356" key="GridCell.Tab.1.bottom/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462542" />
+    <state width="1792" height="353" key="GridCell.Tab.1.bottom/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281359" />
+    <state width="1792" height="356" key="GridCell.Tab.1.center" timestamp="1582537819105">
+      <screen x="0" y="23" width="1792" height="1033" />
+    </state>
+    <state width="1792" height="356" key="GridCell.Tab.1.center/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819105" />
+    <state width="1792" height="356" key="GridCell.Tab.1.center/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462541" />
+    <state width="1792" height="353" key="GridCell.Tab.1.center/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281359" />
+    <state width="1792" height="356" key="GridCell.Tab.1.left" timestamp="1582537819105">
+      <screen x="0" y="23" width="1792" height="1033" />
+    </state>
+    <state width="1792" height="356" key="GridCell.Tab.1.left/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819105" />
+    <state width="1792" height="356" key="GridCell.Tab.1.left/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462541" />
+    <state width="1792" height="353" key="GridCell.Tab.1.left/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281359" />
+    <state width="1792" height="356" key="GridCell.Tab.1.right" timestamp="1582537819106">
+      <screen x="0" y="23" width="1792" height="1033" />
+    </state>
+    <state width="1792" height="356" key="GridCell.Tab.1.right/-439.-1057.2560.1057/0.23.1792.1033@0.23.1792.1033" timestamp="1582537819106" />
+    <state width="1792" height="356" key="GridCell.Tab.1.right/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1582516462542" />
+    <state width="1792" height="353" key="GridCell.Tab.1.right/0.23.1792.1025@0.23.1792.1025" timestamp="1581672281359" />
+    <state width="239" height="448" key="HiddenNamespacesPopup" timestamp="1583158847859">
+      <screen x="0" y="23" width="1792" height="1034" />
+    </state>
+    <state width="239" height="457" key="HiddenNamespacesPopup/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581057252234" />
+    <state width="239" height="446" key="HiddenNamespacesPopup/0.23.1792.1031@0.23.1792.1031" timestamp="1582784793679" />
+    <state width="239" height="448" key="HiddenNamespacesPopup/0.23.1792.1034@0.23.1792.1034" timestamp="1583158847859" />
+    <state x="2495" y="225" key="SettingsEditor" timestamp="1588941470682">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="128" y="-901" key="SettingsEditor/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581315104589" />
+    <state x="397" y="174" key="SettingsEditor/-439.-1057.2560.1057/0.23.1792.1024@0.23.1792.1024" timestamp="1580867237833" />
+    <state x="128" y="-901" key="SettingsEditor/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581048749780" />
+    <state x="537" y="246" key="SettingsEditor/-439.-1057.2560.1057/0.23.1792.1029@0.23.1792.1029" timestamp="1584323008536" />
+    <state x="397" y="185" key="SettingsEditor/-439.-1057.2560.984/0.23.1792.1097@0.23.1792.1097" timestamp="1580890184424" />
+    <state x="2495" y="225" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588941470682" />
+    <state x="626" y="293" key="SettingsEditor/0.23.1792.1031@0.23.1792.1031" timestamp="1583891726150" />
+    <state x="626" y="294" key="SettingsEditor/0.23.1792.1033@0.23.1792.1033" timestamp="1582793975590" />
+    <state x="626" y="276" width="540" height="524" key="StructurePopup" timestamp="1584323013800">
+      <screen x="0" y="23" width="1792" height="1029" />
+    </state>
+    <state x="626" y="276" width="540" height="524" key="StructurePopup/-439.-1057.2560.1057/0.23.1792.1029@0.23.1792.1029" timestamp="1584323013800" />
+    <state x="2759" y="328" key="Vcs.Push.Dialog.v2" timestamp="1588943726031">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2759" y="328" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588943726031" />
+    <state x="750" y="323" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1583158856519">
+      <screen x="0" y="23" width="1792" height="1034" />
+    </state>
+    <state x="750" y="323" key="com.intellij.database.view.ui.DbObjectDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1583158856519" />
+    <state x="2661" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1588943514068">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1150" y="-667" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581382821815" />
+    <state x="1149" y="-667" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1024@0.23.1792.1024" timestamp="1580866671365" />
+    <state x="1150" y="-667" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581576277660" />
+    <state x="1112" y="401" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1025@0.23.1792.1025" timestamp="1581902016030" />
+    <state x="1150" y="-667" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1026@-439.-1057.2560.1057" timestamp="1580977969316" />
+    <state x="550" y="-771" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1027@-439.-1057.2560.1057" timestamp="1582077213518" />
+    <state x="692" y="301" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1027@0.23.1792.1027" timestamp="1582247732512" />
+    <state x="692" y="301" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1029@0.23.1792.1029" timestamp="1584407054144" />
+    <state x="692" y="302" key="com.intellij.ide.util.TipDialog/-439.-1057.2560.1057/0.23.1792.1030@0.23.1792.1030" timestamp="1582680450065" />
+    <state x="593" y="223" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1588939199645" />
+    <state x="2661" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588943514068" />
+    <state x="1112" y="401" key="com.intellij.ide.util.TipDialog/0.23.1792.1024@0.23.1792.1024" timestamp="1581296643394" />
+    <state x="692" y="301" key="com.intellij.ide.util.TipDialog/0.23.1792.1029@0.23.1792.1029" timestamp="1584318894091" />
+    <state x="692" y="302" key="com.intellij.ide.util.TipDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1582766310842" />
+    <state x="692" y="301" key="com.intellij.ide.util.TipDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1584061489322" />
+    <state x="692" y="302" key="com.intellij.ide.util.TipDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1583419051717" />
+    <state x="692" y="303" key="com.intellij.ide.util.TipDialog/0.23.1792.1036@0.23.1792.1036" timestamp="1583111227073" />
+    <state x="507" y="220" width="837" height="550" key="find.popup" timestamp="1584322921833">
+      <screen x="0" y="23" width="1792" height="1029" />
+    </state>
+    <state x="507" y="220" width="837" height="550" key="find.popup/-439.-1057.2560.1057/0.23.1792.1029@0.23.1792.1029" timestamp="1584322921833" />
+    <state x="570" y="213" width="837" height="550" key="find.popup/0.23.1792.1029@0.23.1792.1029" timestamp="1583652677197" />
+    <state x="570" y="214" width="837" height="550" key="find.popup/0.23.1792.1036@0.23.1792.1036" timestamp="1583396301789" />
+    <state x="2970" y="394" key="git4idea.merge.GitPullDialog" timestamp="1588943544991">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2970" y="394" key="git4idea.merge.GitPullDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588943544991" />
+    <state x="602" y="279" width="671" height="681" key="search.everywhere.popup" timestamp="1583637240291">
+      <screen x="0" y="23" width="1792" height="1029" />
+    </state>
+    <state x="421" y="-794" width="958" height="698" key="search.everywhere.popup/-439.-1057.2560.1057/0.23.1792.1024@-439.-1057.2560.1057" timestamp="1581409607648" />
+    <state x="1589" y="264" width="670" height="676" key="search.everywhere.popup/-439.-1057.2560.1057/0.23.1792.1024@0.23.1792.1024" timestamp="1580867306333" />
+    <state x="421" y="-794" width="958" height="698" key="search.everywhere.popup/-439.-1057.2560.1057/0.23.1792.1025@-439.-1057.2560.1057" timestamp="1581580572887" />
+    <state x="602" y="278" width="671" height="677" key="search.everywhere.popup/0.23.1792.1025@0.23.1792.1025" timestamp="1581670423184" />
+    <state x="602" y="279" width="671" height="681" key="search.everywhere.popup/0.23.1792.1029@0.23.1792.1029" timestamp="1583637240291" />
+    <state x="602" y="280" width="671" height="683" key="search.everywhere.popup/0.23.1792.1033@0.23.1792.1033" timestamp="1582867421560" />
+    <state x="602" y="280" width="671" height="684" key="search.everywhere.popup/0.23.1792.1034@0.23.1792.1034" timestamp="1583462477782" />
+    <state x="602" y="280" width="671" height="686" key="search.everywhere.popup/0.23.1792.1036@0.23.1792.1036" timestamp="1583394561758" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/manage.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MiniTIP$data_sync.coverage" NAME="data_sync Coverage Results" MODIFIED="1582516426089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MiniTIP$sync.coverage" NAME="data_sync Coverage Results" MODIFIED="1581472969101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MiniTIP$get_data_all.coverage" NAME="get_data_all Coverage Results" MODIFIED="1581411369205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MiniTIP$GetData.coverage" NAME="get_data_all Coverage Results" MODIFIED="1581329018216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
