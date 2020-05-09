@@ -26,7 +26,10 @@
   
 ### Result
 #### Device Dashboard  
-![](https://github.com/ti1209/MiniTIP/blob/master/device.PNG)
+![](https://github.com/ti1209/MiniTIP/blob/master/device.PNG)  
+![](https://github.com/ti1209/MiniTIP/blob/master/device2.PNG)  
+![](https://github.com/ti1209/MiniTIP/blob/master/device3.PNG)  
+![](https://github.com/ti1209/MiniTIP/blob/master/device4.PNG)  
   
 #### Globallist Dashboard  
 ![](https://github.com/ti1209/MiniTIP/blob/master/globalist.PNG)
